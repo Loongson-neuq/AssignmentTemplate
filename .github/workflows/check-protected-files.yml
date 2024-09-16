@@ -1,0 +1,20 @@
+name: Check Protected Files
+
+on: [push]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Check for modifications
+      run: |
+        modified_files=$(git diff --name-only HEAD~1 HEAD)
+        while IFS= read -r file; do
+          if echo "$modified_files" | grep -q "^$file$"; then
+            echo "Error: $file has been modified."
+            exit 1
+          fi
+        done < .assignment/protected_files.txt
