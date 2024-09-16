@@ -8,6 +8,8 @@ var services = new ServiceCollection();
 
 services.AddLogging();
 
+// This is actually a captive dependency, but it's semantically correct
+// just because the parent only has one instance
 services.AddTransient<AssignmentRunner>();
 
 services.AddSingleton<GitHubActions>();
