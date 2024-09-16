@@ -33,6 +33,8 @@ def validate_config(config):
     if not isinstance(config['version'], int) or config['version'] <= 0:
         return "Invalid 'version': should be a positive integer"
     
+    # TODO: 检查 `auto_grade` 字段
+    
     return None
 
 def main():
