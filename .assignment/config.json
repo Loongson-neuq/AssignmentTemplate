@@ -7,9 +7,14 @@
   "version": 1,
   "auto_grade": {
     "enable": false,
-    "timeout": 60,
-    "command": "make test",
-    "max_score": 100,
-    "upload_output": true
+    "upload_output": true,
+    "steps": [
+      {
+        "title": "Step 1",
+        "timeout": 60,
+        "command": "make test",
+        "max_score": 100
+      }
+    ]
   }
 }
