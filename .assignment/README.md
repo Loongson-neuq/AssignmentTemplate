@@ -18,4 +18,6 @@
 
 ## Submitter
 
-用 C# 编写的作业提交器，用于提交作业。学生无需手动运行，在 commit 到 GitHub 时会在 GitHub Actions 中自动运行。请注意查看 GitHub Actions 的输出，以确认提交是否成功。通常如果没有报错，提交就是成功的。
+~~用 C# 编写的作业提交器，用于提交作业。学生无需手动运行，在 commit 到 GitHub 时会在 GitHub Actions 中自动运行。请注意查看 GitHub Actions 的输出，以确认提交是否成功。通常如果没有报错，提交就是成功的。~~
+
+已迁移至 [Loongson-neuq/LoongsonNeuq](https://github.com/Loongson-neuq/LoongsonNeuq)
