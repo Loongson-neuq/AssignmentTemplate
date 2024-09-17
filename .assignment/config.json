@@ -14,7 +14,7 @@
         "title": "Step 1",
         "timeout": 60,
         "command": "make test",
-        "max_score": 100
+        "score": 100
       }
     ]
   }
