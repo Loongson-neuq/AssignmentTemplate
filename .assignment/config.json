@@ -5,6 +5,7 @@
   "status": "open",
   "id": "week-1",
   "version": 1,
+  "config_version": 1,
   "auto_grade": {
     "enable": false,
     "upload_output": true,
