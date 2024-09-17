@@ -1,0 +1,31 @@
+name: Submit Assignment
+
+on: [push, workflow_dispatch]
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    env:
+        project: '.LoongsonNeuq/LoongsonNeuq.AssignmentSubmit/LoongsonNeuq.AssignmentSubmit.csproj'
+        GITHUB_TOKEN: ${{ secrets.SUMMARY_TOKEN }}
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 8.0.x
+
+    - name: Checkout Submit Solution
+      uses: actions/checkout@v4
+      with:
+        repository: 'Loongson-neuq/LoongsonNeuq'
+        path: '.LoongsonNeuq'
+    
+    - name: Restore Submit Solution
+      run: dotnet restore ${{ env.project }}
+
+    - name: Submit Assignment
+      run: dotnet run --project ${{ env.project }}
+
